@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { fetchCryptoNews } from '@/services/newsService';
 import { ExternalLink } from 'lucide-react';

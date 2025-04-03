@@ -6,13 +6,12 @@ interface NewsItem {
   publishedAt: string;
 }
 
-// News API'den kripto haberleri çekmek için fonksiyon
+// CoinGecko API'den kripto haberleri çekmek için fonksiyon
 export const fetchCryptoNews = async (): Promise<NewsItem[]> => {
   try {
-    // News API'ye istek atarken CORS sorunlarını önlemek için 
-    // ücretsiz bir proxy kullanıyoruz (gnews API alternatif olarak kullanılabilir)
+    // CoinGecko API'den haberler çekilecek
     const response = await fetch(
-      'https://gnews.io/api/v4/search?q=cryptocurrency+bitcoin&lang=tr&country=tr&max=10&apikey=511c743fa75a95f0d1d82597110e2306'
+      'https://api.coingecko.com/api/v3/news'
     );
     
     if (!response.ok) {
@@ -21,12 +20,12 @@ export const fetchCryptoNews = async (): Promise<NewsItem[]> => {
     
     const data = await response.json();
     
-    // GNews API yanıt formatı farklı olduğu için dönüştürüyoruz
-    return data.articles.map((article: any) => ({
+    // CoinGecko API yanıtını istediğimiz formata dönüştürüyoruz
+    return data.map((article: any) => ({
       title: article.title,
       url: article.url,
-      source: article.source.name,
-      publishedAt: article.publishedAt
+      source: article.author,
+      publishedAt: article.published_at
     }));
   } catch (error) {
     console.error('Haberler çekilirken hata oluştu:', error);
