@@ -21,11 +21,11 @@ const NewsMarquee: React.FC = () => {
     );
   }
 
-  if (error) {
+  if (error || newsItems.length === 0) {
     return (
       <div className="w-full bg-secondary text-secondary-foreground py-2 overflow-hidden border-t border-border">
-        <div className="container mx-auto">
-          <p className="text-destructive">Haberler yüklenirken bir sorun oluştu.</p>
+        <div className="container mx-auto px-4">
+          <p className="text-destructive">Gerçek zamanlı haberler şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyin.</p>
         </div>
       </div>
     );
