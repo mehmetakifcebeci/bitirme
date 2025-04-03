@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Header from '@/components/Header';
 import TradingViewChart from '@/components/TradingViewChart';
 import TimeIntervalSelector from '@/components/TimeIntervalSelector';
+import NewsMarquee from '@/components/NewsMarquee';
 import { Card } from '@/components/ui/card';
 
 const CryptoChart = () => {
@@ -28,6 +29,7 @@ const CryptoChart = () => {
           />
         </Card>
       </main>
+      <NewsMarquee />
       <footer className="bg-background border-t border-border p-4 text-center text-sm text-muted-foreground">
         © {new Date().getFullYear()} Bitcoin Canlı Grafik | Gerçek zamanlı veri TradingView tarafından sağlanmaktadır
       </footer>
