@@ -75,7 +75,7 @@
 }
 
 .animate-marquee {
-  animation: marquee 60s linear infinite;
+  animation: marquee 30s linear infinite; /* Animation hızını 60 saniyeden 30 saniyeye düşürdüm (daha hızlı) */
 }
 
 .marquee-container:hover .animate-marquee {

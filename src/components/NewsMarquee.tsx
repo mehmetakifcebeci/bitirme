@@ -32,7 +32,7 @@ const NewsMarquee: React.FC = () => {
   }
 
   // Haberleri birleştir ve yeterince uzun bir döngü oluştur
-  const marqueeItems = [...newsItems, ...newsItems, ...newsItems];
+  const marqueeItems = [...newsItems, ...newsItems, ...newsItems, ...newsItems, ...newsItems];
 
   return (
     <div className="w-full bg-secondary text-secondary-foreground py-2 overflow-hidden border-t border-border">
