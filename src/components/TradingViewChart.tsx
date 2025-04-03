@@ -84,11 +84,11 @@ const TradingViewChart: React.FC<TradingViewChartProps> = ({ symbol, interval })
   };
 
   return (
-    <div className="tradingview-chart">
+    <div className="h-full w-full">
       <div 
         id="tradingview_chart" 
         ref={container} 
-        className="tradingview-widget-container"
+        className="tradingview-widget-container h-full"
       />
     </div>
   );

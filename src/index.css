@@ -58,12 +58,6 @@
   height: 100%;
 }
 
-/* Fix for iframe fullheight */
-.tradingview-chart {
-  height: calc(100vh - 80px);
-  width: 100%;
-}
-
 /* Marquee Animation */
 @keyframes marquee {
   0% {
@@ -75,7 +69,7 @@
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite; /* Animation hızını 60 saniyeden 30 saniyeye düşürdüm (daha hızlı) */
+  animation: marquee 30s linear infinite;
 }
 
 .marquee-container:hover .animate-marquee {
